@@ -16,7 +16,7 @@ if (char === "") {
   var repeated = char.repeat(numHeight + 2);
 
 for (i = 1; i <= numHeight; i++) {
-  console.log("tree", i,);
+  console.log("tree", i, repeated);
 
 
 
