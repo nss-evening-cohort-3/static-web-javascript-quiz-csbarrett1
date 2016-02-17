@@ -13,10 +13,15 @@ if (char === "") {
 }
 
   var numHeight = parseInt(height);
+  var repeated = char.repeat(numHeight + 2);
 
-for (char = 0; char <= numHeight; char++) {
-  console.log("tree", char); 
+for (i = 1; i <= numHeight; i++) {
+  console.log("tree", i,);
+
+
+
 }
+
 
 
 
