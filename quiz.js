@@ -1,4 +1,15 @@
+
+
+
+
+
+
+
+
+
+
 var button = document.getElementById("btn");
+var tree = document.getElementById("tree");
 
 button.addEventListener("click", function(event) {
   var height = document.getElementById("height").value;
@@ -13,11 +24,12 @@ if (char === "") {
 }
 
   var numHeight = parseInt(height);
-  var repeated = char.repeat(numHeight + 2);
 
 for (i = 1; i <= numHeight; i++) {
-  console.log("tree", i, repeated);
 
+var tree = char += char;
+
+console.log("", tree);
 
 
 }
@@ -26,10 +38,3 @@ for (i = 1; i <= numHeight; i++) {
 
 
 })
-
-
-
-
-
-
-
