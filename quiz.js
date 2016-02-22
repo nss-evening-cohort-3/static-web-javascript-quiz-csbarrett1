@@ -1,40 +1,35 @@
-
-
-
-
-
-
-
-
-
-
 var button = document.getElementById("btn");
-var tree = document.getElementById("tree");
+button.addEventListener("click", getValue);
 
-button.addEventListener("click", function(event) {
-  var height = document.getElementById("height").value;
-  var char = document.getElementById("char").value;
-
-if (height != parseInt(height)) {
-  alert("Please enter an integer");
+function checkValue() {
+  if (!tree.height || !tree.char) {
+    alert("Please complete both fields");
+  } else {
+    buildTree();
+  }
 }
 
-if (char === "") {
-  alert("Both fields must be complete");
+function getValue() {
+  tree.height = document.getElementById("height").value;
+  tree.char = document.getElementById("char").value;
+  checkValue();
 }
 
-  var numHeight = parseInt(height);
+var tree = {}
 
-for (i = 1; i <= numHeight; i++) {
-
-var tree = char += char;
-
-console.log("", tree);
-
-
+function buildTree() {
+  var growTree = "";
+  var treeWidth = (2 * tree.height) - 1;
+  for (i = 0; i < tree.height; i++) {
+    var charWidth = (i * 2) + 1;
+    var spaceWidth = (treeWidth - charWidth) / 2;
+    for (k = 0; k < spaceWidth; k++) {
+      growTree += " ";
+    }
+    for (j = 0; j < charWidth; j++) {
+      growTree += tree.char;
+    }
+    growTree += '\n'
+  }
+  console.log(growTree);
 }
-
-
-
-
-})
