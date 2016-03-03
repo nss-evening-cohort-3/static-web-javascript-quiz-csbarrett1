@@ -5,21 +5,22 @@ button.addEventListener("click", getValue);
 
 //Create a function called "getValue" that assigns the values of the inputs to the "tree" object.
 function getValue() {
+  var tree = {};
   tree.height = document.getElementById("height").value;
   tree.char = document.getElementById("char").value;
 //Runs a if/else statement function to check if user has filled out both inputs.
-  checkValue();
+  checkValue(tree);
 }
 
 //If either of the input are not completed, alert the user to do so. 
-function checkValue() {
+function checkValue(tree) {
   if (!tree.height || !tree.char) {
     alert("Please complete both fields");
 //If both inputs are completed, run the function "buildTree" with the "tree" object passed into it.
   } else {
     buildTree(tree);
   }
-}
+};
 
 
 function buildTree(tree) {
